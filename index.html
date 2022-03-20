@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+
+
+ <!-- Reload and Fonts Libraries -->
+ 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <!-- CSS StyleSheet  -->
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Map API Stylesheet & javascript  -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <!-- javascript File  -->
+
+  <script defer type="module" src="./assets/javascript/testify_script.js"></script>
+
+  <title>Ip Address Tracker</title>
+</head>
+<body>
+
+  <!-- Loader at the startup  -->
+
+  <div class="modal">
+    <svg class="o"><use xlink:href = "./assets/images/icons.svg#icon-loader" fill="black"></use></svg>
+  </div>
+
+  <header class="header">
+    <div class="app">
+
+      <!-- Main Title  -->
+
+      <div class="app__name">
+        IP Address Tracker
+      </div>
+
+ <!-- Main Title END -->
+
+ <!-- Input Fild and Button Start  -->
+
+      <div class="app__input">
+        <label for="ip-address"></label>
+        <input type="text" class="app__input--ip" id="ip-address" name="ip-address" placeholder="Enter IP address">
+        <button class="btn" type="submit">
+          <img src="./assets/images/icon-arrow.svg" alt="submit-button">
+        </button>
+      </div>
+
+      <!-- Input and Button END  -->
+
+      <!-- Overly Container with the information Start  -->
+
+      <div class="user__info">
+        <div class="user__info-box user__info--1">
+          <div class="user__info--name">IP Address</div>
+          <div class="user-ip user__info--value">--</div>
+        </div>
+        <div class="user__info-box user__info--2">
+          <div class="user__info--name">Location</div>
+          <div class="user-location user__info--value">--</div>
+         
+        </div>
+        <div class="user__info-box user__info--3">
+          <div class="user__info--name">Timezone</div>
+          <div class="user-timezone user__info--value">--</div>
+        </div>
+        <div class="user__info-box user__info--4">
+          <div class="user-service-name user__info--name">ISP</div>
+          <div class="user-service-value user__info--value">--</div>
+        </div>
+      </div>
+
+      <!-- Overly Container with the information END  -->
+
+    </div>
+  </header>
+
+  <!-- Show Map Container  -->
+
+  <div id="map"></div>
+
+  <!-- Map container END  -->
+  
+</body>
+</html>
